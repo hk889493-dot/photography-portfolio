@@ -1,133 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Snap Studio</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Insta Snap Studio</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-<style>
-
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-}
-
-
-/* Navbar */
-
-nav{
-    background:#111;
-    padding:15px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
-}
-
-nav a:hover{
-    color:#ffcc00;
-}
-
-
-/* Header */
-
-header{
-    text-align:center;
-    padding:20px;
-}
-
-.logo{
-    font-size:30px;
-    font-weight:bold;
-}
-
-
-/* Hero */
-
-.hero{
-    text-align:center;
-    padding:80px 20px;
-    background:#f2f2f2;
-}
-
-.hero h1{
-    font-size:45px;
-}
-
-.hero p{
-    font-size:22px;
-}
-
-
-button{
-    padding:12px 30px;
-    background:black;
-    color:white;
-    border:none;
-    border-radius:20px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#ffcc00;
-    color:black;
-}
-
-
-/* Contact */
-
-.contact{
-    text-align:center;
-    padding:40px;
-}
-
-.contact p{
-    font-size:18px;
-}
-
-
-</style>
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-
 
 <body>
 
+<nav class="navbar">
+    <div class="logo">📸 Insta Snap Studio</div>
 
-<nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/services">Services</a>
-    <a href="/contact">Contact</a>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
 </nav>
-
-
-<header>
-
-<div class="logo">
-📸 Insta Snap Studio
-</div>
-
-</header>
 
 
 <section class="hero">
 
-<h1>Capture Every Moment</h1>
+<div class="overlay">
 
-<p>Professional Photography & Cinematography</p>
+<h1>Capture Every Beautiful Moment</h1>
 
-<button>View Portfolio</button>
+<p>
+Professional Photography | Cinematography | Wedding | Pre Wedding | Travel
+</p>
+
+<a href="/gallery" class="btn">
+View Gallery
+</a>
+
+</div>
+
+</section>
+
+
+<section class="about">
+
+<h2>About Insta Snap Studio</h2>
+
+<p>
+
+Welcome to Insta Snap Studio.
+
+We capture your special moments with creativity and passion.
+
+From weddings to birthdays, travel photography, family shoots,
+pre-wedding and cinematic videos, our goal is to create memories
+that last forever.
+
+</p>
+
+</section>
+
+
+<section class="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📸 Wedding Photography</h3>
+<p>Beautiful wedding photography with premium editing.</p>
+</div>
+
+<div class="card">
+<h3>💍 Pre Wedding</h3>
+<p>Creative outdoor and indoor pre wedding shoots.</p>
+</div>
+
+<div class="card">
+<h3>🎂 Birthday Shoot</h3>
+<p>Birthday photography and cinematic reels.</p>
+</div>
+
+<div class="card">
+<h3>🏔 Travel Photography</h3>
+<p>Travel memories captured professionally.</p>
+</div>
+
+<div class="card">
+<h3>👨‍👩‍👧 Family Shoot</h3>
+<p>Capture beautiful family memories forever.</p>
+</div>
+
+<div class="card">
+<h3>🎥 Cinematic Video</h3>
+<p>Professional cinematic editing and reels.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="gallery">
+
+<h2>Featured Gallery</h2>
+
+<div class="gallery-box">
+
+<img src="{{ url_for('static', filename='images/photo1.jpg') }}">
+<img src="{{ url_for('static', filename='images/photo1.jpg') }}">
+<img src="{{ url_for('static', filename='images/photo1.jpg') }}">
+<img src="{{ url_for('static', filename='images/photo1.jpg') }}">
+<img src="{{ url_for('static', filename='images/photo1.jpg') }}">
+<img src="{{ url_for('static', filename='images/photo1.jpg') }}">
+
+</div>
+
+</section>
+
+
+<section class="why">
+
+<h2>Why Choose Us?</h2>
+
+<div class="why-box">
+
+<div>✔ Professional Editing</div>
+
+<div>✔ Affordable Packages</div>
+
+<div>✔ High Quality Photos</div>
+
+<div>✔ Fast Delivery</div>
+
+<div>✔ Friendly Behaviour</div>
+
+<div>✔ Creative Ideas</div>
+
+</div>
 
 </section>
 
@@ -136,17 +147,34 @@ button:hover{
 
 <h2>Contact Us</h2>
 
-<p>📞 Phone : +91 8894938278</p>
+<p>📞 +91 8894938278</p>
 
-<p>📧 Gmail : hk889493@gmail.com</p>
+<p>📧 hk889493@gmail.com</p>
 
 <p>📷 Instagram : @instasnapstudio__</p>
 
-<p>▶️ YouTube : A Travelling Soul</p>
+<p>▶ YouTube : A Travelling Soul</p>
+
+<a href="/contact" class="btn">
+Book Now
+</a>
 
 </section>
 
 
-</body>
+<footer>
 
+<p>
+
+© 2026 Insta Snap Studio
+
+<br>
+
+Designed by Hari Krishan
+
+</p>
+
+</footer>
+
+</body>
 </html>
