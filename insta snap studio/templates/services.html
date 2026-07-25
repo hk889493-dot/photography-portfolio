@@ -1,134 +1,299 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 
-<title>Our Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services - Insta Snap Studio</title>
 
 <style>
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f2f2f2;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
+body{
+background:#f5f5f5;
+}
 
 /* Navbar */
 
 nav{
-    background:#111;
-    padding:15px;
-    text-align:center;
+background:#111;
+padding:18px;
+text-align:center;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:bold;
+margin-bottom:10px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
+color:white;
+text-decoration:none;
+margin:20px;
+font-size:18px;
+transition:.3s;
 }
 
-nav a:hover{
-    color:#ffcc00;
+nav a:hover,
+nav a.active{
+color:#ffcc00;
 }
 
+/* Heading */
 
-/* Services */
+.title{
+text-align:center;
+padding:50px 20px;
+}
+
+.title h1{
+font-size:45px;
+color:#111;
+margin-bottom:15px;
+}
+
+.title p{
+font-size:18px;
+color:#666;
+}
+
+/* Cards */
 
 .services{
-    text-align:center;
-    padding:40px;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:40px 80px;
+
 }
 
+.card{
 
-h1{
-    color:#333;
+background:white;
+width:300px;
+padding:35px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+text-align:center;
+transition:.3s;
+
 }
 
+.card:hover{
 
-ul{
-    list-style:none;
-    padding:0;
+transform:translateY(-10px);
+
 }
 
+.card h1{
 
-ul li{
-    background:white;
-    margin:15px auto;
-    padding:15px;
-    width:300px;
-    border-radius:10px;
-    font-size:20px;
-    box-shadow:0 3px 8px gray;
+font-size:55px;
+margin-bottom:15px;
+
 }
 
+.card h2{
 
-/* Button */
+margin-bottom:15px;
+color:#111;
+
+}
+
+.card p{
+
+color:#666;
+line-height:1.8;
+margin-bottom:25px;
+
+}
 
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:black;
-    color:white;
-    text-decoration:none;
-    border-radius:20px;
-}
 
+display:inline-block;
+background:#111;
+color:white;
+padding:12px 28px;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+
+}
 
 .btn:hover{
-    background:#ffcc00;
-    color:black;
+
+background:#ffcc00;
+color:black;
+
 }
 
+/* Footer */
+
+footer{
+
+margin-top:50px;
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+
+}
 
 </style>
 
 </head>
 
-
 <body>
 
-
 <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/services">Services</a>
-    <a href="/contact">Contact</a>
+
+<div class="logo">
+📸 Insta Snap Studio
+</div>
+
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/gallery">Gallery</a>
+<a href="/services" class="active">Services</a>
+<a href="/contact">Contact</a>
+
 </nav>
 
+<section class="title">
 
+<h1>Our Photography Services</h1>
 
-<div class="services">
+<p>
+We capture every special moment with creativity, passion and professionalism.
+</p>
 
-<h1>💼 Our Services</h1>
+</section>
 
+<section class="services">
 
-<ul>
+<div class="card">
 
-<li>📸 Wedding Photography</li>
+<h1>💍</h1>
 
-<li>💍 Pre Wedding Shoot</li>
+<h2>Wedding Photography</h2>
 
-<li>🎂 Birthday Shoot</li>
+<p>
+Beautiful wedding moments captured with elegance and creativity.
+</p>
 
-<li>🏔️ Travel Photography</li>
-
-<li>👤 Portrait Photography</li>
-
-</ul>
-
-
-<a class="btn" href="/">
-🏠 Home
+<a href="/wedding" class="btn">
+View Gallery
 </a>
-
 
 </div>
 
+<div class="card">
+
+<h1>❤️</h1>
+
+<h2>Pre-Wedding Shoot</h2>
+
+<p>
+Romantic outdoor and cinematic pre-wedding photography.
+</p>
+
+<a href="/prewedding" class="btn">
+View Gallery
+</a>
+
+</div>
+
+<div class="card">
+
+<h1>🎂</h1>
+
+<h2>Birthday Photography</h2>
+
+<p>
+Capture joyful birthday celebrations with premium photography.
+</p>
+
+<a href="/birthday" class="btn">
+View Gallery
+</a>
+
+</div>
+
+<div class="card">
+
+<h1>👨‍👩‍👧</h1>
+
+<h2>Family Photography</h2>
+
+<p>
+Natural family portraits full of love and happiness.
+</p>
+
+<a href="/family" class="btn">
+View Gallery
+</a>
+
+</div>
+
+<div class="card">
+
+<h1>🚶</h1>
+
+<h2>Street Photography</h2>
+
+<p>
+Creative street moments and urban lifestyle photography.
+</p>
+
+<a href="/street" class="btn">
+View Gallery
+</a>
+
+</div>
+
+<div class="card">
+
+<h1>🎥</h1>
+
+<h2>Cinematic Videography</h2>
+
+<p>
+Professional cinematic videos that tell your story beautifully.
+</p>
+
+<a href="/cinematic" class="btn">
+View Gallery
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>📸 Insta Snap Studio</h2>
+
+<p>
+Capturing Moments • Creating Memories
+</p>
+
+<br>
+
+<p>
+© 2026 Insta Snap Studio | All Rights Reserved
+</p>
+
+</footer>
 
 </body>
-
 </html>

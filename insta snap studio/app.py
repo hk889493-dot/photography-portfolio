@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
 @app.route("/gallery")
 def gallery():
     return render_template("gallery.html")
@@ -14,13 +18,13 @@ def gallery():
 def services():
     return render_template("services.html")
 
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+@app.route("/street")
+def street():
+    return render_template("street.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

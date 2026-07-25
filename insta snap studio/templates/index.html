@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,145 +7,280 @@
 
 <title>Insta Snap Studio</title>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
 <style>
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
+body{
+background:#f5f5f5;
+}
 
 /* Navbar */
 
 nav{
-    background:#111;
-    padding:15px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:20px;
-    font-size:18px;
-}
-
-nav a:hover{
-    color:#ffcc00;
-}
-
-
-/* Header */
-
-header{
-    text-align:center;
-    padding:20px;
+background:#111;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-left:50px;
+padding-right:50px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-    font-size:30px;
-    font-weight:bold;
+color:#fff;
+font-size:28px;
+font-weight:bold;
 }
 
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#ffcc00;
+}
 
 /* Hero */
 
 .hero{
-    text-align:center;
-    padding:80px 20px;
-    background:#f2f2f2;
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("{{ url_for('static', filename='images/photo1.jpg') }}");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
 }
 
 .hero h1{
-    font-size:45px;
+font-size:60px;
+margin-bottom:20px;
 }
 
 .hero p{
-    font-size:22px;
+font-size:22px;
+margin-bottom:30px;
 }
 
-
-button{
-    padding:12px 30px;
-    background:black;
-    color:white;
-    border:none;
-    border-radius:20px;
-    cursor:pointer;
+.hero a{
+text-decoration:none;
+background:#ffcc00;
+color:black;
+padding:15px 35px;
+border-radius:8px;
+font-size:20px;
+font-weight:bold;
+transition:.3s;
 }
 
-button:hover{
-    background:#ffcc00;
-    color:black;
+.hero a:hover{
+background:white;
 }
 
+/* Services */
 
-/* Contact */
-
-.contact{
-    text-align:center;
-    padding:40px;
+.services{
+padding:70px 8%;
+text-align:center;
 }
 
-.contact p{
-    font-size:18px;
+.services h2{
+font-size:40px;
+margin-bottom:40px;
 }
 
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#111;
+color:white;
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+/* CTA */
+
+.cta{
+background:#111;
+color:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.cta h2{
+color:#ffcc00;
+margin-bottom:20px;
+font-size:38px;
+}
+
+/* Footer */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+footer h2{
+color:#ffcc00;
+margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:15px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
 
 </style>
 
 </head>
 
-
 <body>
 
-
 <nav>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/gallery">Gallery</a>
-    <a href="/services">Services</a>
-    <a href="/contact">Contact</a>
-</nav>
-
-
-<header>
 
 <div class="logo">
 📸 Insta Snap Studio
 </div>
 
-</header>
+<ul>
 
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/gallery">Gallery</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/contact">Contact</a></li>
+
+</ul>
+
+</nav>
 
 <section class="hero">
 
-<h1>Capture Every Moment</h1>
+<div>
 
-<p>Professional Photography & Cinematography</p>
+<h1>Capture Every Beautiful Moment</h1>
 
-<button>View Portfolio</button>
+<p>
+Professional Photography • Wedding • Pre Wedding • Events • Portraits
+</p>
 
-</section>
+<a href="/contact">Book Now</a>
 
-
-<section class="contact">
-
-<h2>Contact Us</h2>
-
-<p>📞 Phone : +91 8894938278</p>
-
-<p>📧 Gmail : hk889493@gmail.com</p>
-
-<p>📷 Instagram : @instasnapstudio__</p>
-
-<p>▶️ YouTube : A Travelling Soul</p>
+</div>
 
 </section>
 
+<section class="services">
+
+<h2>Our Photography Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📸 Wedding Photography</h3>
+<p>Beautiful wedding memories captured forever.</p>
+</div>
+
+<div class="card">
+<h3>💍 Pre Wedding Shoot</h3>
+<p>Creative outdoor and cinematic couple shoots.</p>
+</div>
+
+<div class="card">
+<h3>🎂 Birthday Events</h3>
+<p>Capture every smile and celebration.</p>
+</div>
+
+<div class="card">
+<h3>🎥 Cinematic Video</h3>
+<p>Professional video shooting and editing.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Your Story Deserves The Best Photos</h2>
+
+<p>
+Let's create timeless memories together.
+</p>
+
+</section>
+
+<footer>
+
+<h2>📸 Insta Snap Studio</h2>
+
+<p>Capturing Memories • Creating Stories</p>
+
+<br>
+
+<p>© 2026 Insta Snap Studio | All Rights Reserved</p>
+
+</footer>
 
 </body>
-
 </html>
